@@ -5,6 +5,6 @@ from bboard.views import index, by_rubric
 
 
 urlpatterns = [
-    path('<int:rubric_id>/', by_rubric),
-    path('', index),
+    path('<int:rubric_id>/', by_rubric, name='by_rubric'),
+    path('', index, name='index'),
 ]
