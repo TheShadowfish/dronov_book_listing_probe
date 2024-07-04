@@ -78,6 +78,14 @@ class Bb(models.Model):
     price = models.FloatField(**NULLABLE, verbose_name='Цена')
     published = models.DateTimeField(auto_now_add=True, db_index=True, verbose_name='Опубликовано')
 
+    # from datetime import datetime
+    # from django.utils.timezone import get_current_timezone
+    # bb.published = datetime(2022, 10, 3, 14, 24, 56, 0,
+    #                         get_current_timezone())
+
+    # from datetime import datetime, timezone
+    # dt = datetime(2022, 10, 3, 14, 24, 56, 0, timezone.utc)
+
     class Meta:
         verbose_name_plural = 'Объявления'
         verbose_name = 'Объявление'
