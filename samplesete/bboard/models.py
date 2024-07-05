@@ -87,6 +87,8 @@ class Bb(models.Model):
     # dt = datetime(2022, 10, 3, 14, 24, 56, 0, timezone.utc)
 
     class Meta:
+        # order_with_respect_to = 'rubric'
+
         verbose_name_plural = 'Объявления'
         verbose_name = 'Объявление'
         ordering = ['-published']
@@ -99,6 +101,7 @@ class Rubric (models .Model) :
     name = models.CharField(max_length=20, db_index=True,  verbose_name='Название рубрики')
 
     class Meta:
+
         verbose_name_plural = 'Рубрики'
         verbose_name = 'Рубрика'
         ordering = ['name']
